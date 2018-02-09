@@ -1,0 +1,10 @@
+{% extends "countries/base.html" %}
+
+{% block content %}
+	<h1>Continents</h1>
+	{% for cont in continents %}
+		<hr />
+			<a href="{% url 'continents:continent_detail' %}">{{cont.name}}</a>
+		<hr />
+	{% endfor %}
+{% endblock %}

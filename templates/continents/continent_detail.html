@@ -1,0 +1,10 @@
+{% extends "countries/base.html" %}
+
+{% block content %}
+	<h1>Continents</h1>
+	{% for cont in continents %}
+		<hr />
+			{% include "continent.html" %}
+		<hr />
+	{% endfor %}
+{% endblock %}

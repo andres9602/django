@@ -1,0 +1,26 @@
+{% extends "countries/base.html" %}
+
+{% block content %}
+
+	{% comment %} texto prueba {% endcomment %}
+
+	{% for country in countries %}
+		<p>{{ country }}</p>
+
+		{% if country.name == 'colombia' %}
+			<p>Tierra querida</p>
+		{% endif %}
+
+		<p>lorem: {% lorem %}</p>
+		<p>fecha actual: {% now "Y-m-d" %}</p>
+
+		{% filter force_escape|lower %}
+			%&$#$%^~~^`% TEXTO
+		{% endfilter %}
+
+	{% endfor %}
+
+	<p>{{ "PRUEBA"|capfirst }}</p>
+	<p>{{ 6|divisibleby:"3" }}</p>
+
+{% endblock %}

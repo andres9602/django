@@ -1,0 +1,7 @@
+{% extends "countries/base.html" %}
+
+{% block content %}
+	{% for country in object_list %}
+		{% include "countries/country.html" %}
+	{% endfor %}
+{% endblock %}
